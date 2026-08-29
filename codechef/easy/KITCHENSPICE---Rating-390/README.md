@@ -4,62 +4,65 @@
 
 ## Problem
 
-### Minimum Coins
+### Spice Level
 
-There are only $2$ type of denominations in Chefland:
+Each item in Chef’s menu is assigned a spice level from $1$ to $10$. Based on the spice level, the item is categorised as:
 
-- Coins worth $1$ rupee each
-- Notes worth $10$ rupees each
+- MILD: If the spice level is less than $4$.
+- MEDIUM: If the spice level is greater than equal to $4$ but less than $7$.
+- HOT: If the spice level is greater than equal to $7$.
 
-Chef wants to pay his friend exactly $X$ rupees. What is the minimum number of  **coins**  Chef needs to pay exactly $X$ rupees?
+Given that the spice level of an item is $X$, find the category it lies in.
 
 ### Input Format
 - The first line of input will contain a single integer $T$, denoting the number of test cases.
-- Each test case consists of a single line of input containing a single integer $X$.
+- Each test case consists of an integer $X$ — the spice level of the item.
 ### Output Format
 
-For each test case, output on a new line the minimum number of coins Chef needs to pay exactly $X$ rupees.
+For each test case, output on a new line, the category that the item lies in.
+
+You may print each character in uppercase or lowercase. For example, `HOT`, `hot`, `Hot`, and `hOT` are all considered the same.
 
 ### Constraints
 - $1 \leq T \leq 1000$
-- $1 \leq X \leq 1000$
+- $1 \leq X \leq 10$
 ### Sample 1:
 Input
 Output
 
 ```
 4
-53
-100
-9
-11
-
-```
-
-```
-3
-0
-9
+4
 1
+6
+9
+
+```
+
+```
+MEDIUM
+MILD
+MEDIUM
+HOT
 
 ```
 
 ### Explanation:
 
- **Test case $1$:**  Chef can use $5$ notes and $3$ coins in the optimal case.
+ **Test case $1$:**  The spice level is greater than $4$ but less than $7$. Thus, it is in `MEDIUM` category.
 
- **Test case $2$:**  Chef can use $10$ notes and $0$ coins in the optimal case.
+ **Test case $2$:**  The spice level is less than $4$. Thus, it is in `MILD` category.
 
- **Test case $3$:**  Chef can only use $9$ coins.
+ **Test case $3$:**  The spice level is greater than $4$ but less than $7$. Thus, it is in `MEDIUM` category.
 
- **Test case $4$:**  Chef can use $1$ note and $1$ coin in the optimal case.
+ **Test case $4$:**  The spice level is greater than $7$. Thus, it is in `HOT` category.
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-29T02:57:30.884Z  
+**Submitted:** 2026-08-29T03:42:26.966Z  
 
 ```java
 import java.util.*;
@@ -70,12 +73,20 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
-		for(int i =0; i < t; i++) {
-		    int x = sc.nextInt();
-		    System.out.println(x% 10);
-		}
+	Scanner sc = new Scanner(System.in);
+	int t = sc.nextInt();
+	for(int i = 0 ; i < t ; i++){
+	    int x = sc.nextInt();
+	    if(x < 4) {
+	        System.out.println("MILD");
+	        
+	    } else if (x < 7) {
+	        System.out.println("MEDIUM");
+	        
+	    } else {
+	        System.out.println("HOT");
+	    }
+	}
 
 	}
 }
