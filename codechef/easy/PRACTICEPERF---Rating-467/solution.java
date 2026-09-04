@@ -13,10 +13,10 @@ class Codechef
 		int p4 = sc.nextInt();
 		 int count = 0;
         
-        if (p1 >= 10) count++;;
-        if (p2 >= 10) count++;;
-        if (p3 >= 10) count++;;
-        if (p4 >= 10) count++;;
+        if (p1 >= 10) count++;
+        if (p2 >= 10) count++;
+        if (p3 >= 10) count++;
+        if (p4 >= 10) count++;
         
       System.out.println(count);
 	}
