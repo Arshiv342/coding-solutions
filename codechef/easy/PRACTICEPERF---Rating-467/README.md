@@ -101,7 +101,7 @@ Chef was not able to solve at least $10$ problems in any of the four weeks. Henc
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T11:05:09.916Z  
+**Submitted:** 2026-09-04T11:05:37.451Z  
 
 ```java
 import java.util.*;
@@ -119,10 +119,10 @@ class Codechef
 		int p4 = sc.nextInt();
 		 int count = 0;
         
-        if (p1 >= 10) count++;;
-        if (p2 >= 10) count++;;
-        if (p3 >= 10) count++;;
-        if (p4 >= 10) count++;;
+        if (p1 >= 10) count++;
+        if (p2 >= 10) count++;
+        if (p3 >= 10) count++;
+        if (p4 >= 10) count++;
         
       System.out.println(count);
 	}
