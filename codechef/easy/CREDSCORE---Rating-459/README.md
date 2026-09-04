@@ -62,7 +62,7 @@ Since $251 \lt 750$, it is not possible to access CRED programs.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T10:58:15.618Z  
+**Submitted:** 2026-09-04T10:57:44.075Z  
 
 ```java
 import java.util.*;
@@ -75,10 +75,10 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
-		if(x<750) {
-		    System.out.println("NO");
-		} else {
+		if(x>750) {
 		    System.out.println("YES");
+		} else {
+		    System.out.println("NO");
 		}
 
 	}
