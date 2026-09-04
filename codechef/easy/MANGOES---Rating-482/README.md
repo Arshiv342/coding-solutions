@@ -1,0 +1,86 @@
+# MANGOES - Rating 482
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+### The Mango Truck
+
+You are given that a mango weighs $X$ kilograms and a truck weighs $Y$ kilograms. You want to cross a bridge that can withstand a weight of $Z$ kilograms.
+
+Find the  **maximum**  number of mangoes you can load in the truck so that you can cross the bridge safely.
+
+### Input Format
+- First line will contain $T$, the number of test cases. Then the test cases follow.
+- Each test case consists of a single line of input, three integers $X, Y, Z$ - the weight of mango, the weight of truck and the weight the bridge can withstand respectively.
+### Output Format
+
+For each test case, output in a single line the  **maximum**  number of mangoes that you can load in the truck.
+
+### Constraints
+- $1 \leq T \leq 1000$
+- $1 \leq X \leq Y \leq Z \leq 100$
+### Sample 1:
+Input
+Output
+
+```
+4
+2 5 11
+4 10 20
+1 1 1
+6 40 90
+
+```
+
+```
+3
+2
+0
+8
+
+```
+
+### Explanation:
+
+ **Test case $1$:**  You can load $3$ mangoes at maximum. The total weight is $3\times 2+5 = 11 \leq 11$. Thus, the truck can safely cross the bridge with $3$ mangoes. If you load $4$ mangoes, the total weight is $4\times 2+5 = 13 \gt 11$.
+
+ **Test case $2$:**  You can load $2$ mangoes at maximum. The total weight is $2\times 4+10 = 18 \leq 20$. Thus, the truck can safely cross the bridge with $2$ mangoes.
+
+ **Test case $3$:**  You can load $0$ mangoes at maximum. The total weight is $0\times 1+1 = 1 \leq 1$. Thus, the truck can safely cross the bridge only if there are $0$ mangoes.
+
+ **Test case $4$:**  You can load $8$ mangoes at maximum. The total weight is $6\times 8+40 = 88 \leq 90$. Thus, the truck can safely cross the bridge with $8$ mangoes.
+
+## Solution
+
+**Language:** Java  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-09-04T19:30:10.433Z  
+
+```java
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		for(int i = 0; i < t; i++) {
+		    int x = sc.nextInt();
+		      int y = sc.nextInt();
+		        int z = sc.nextInt();
+		System.out.println((z -y) /x);        
+		}
+
+	}
+}
+
+```
+
+---
+
+[View on CodeChef](https://www.codechef.com/problems/MANGOES)
