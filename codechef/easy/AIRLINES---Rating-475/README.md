@@ -4,64 +4,64 @@
 
 ## Problem
 
-### Insurance
+### Codechef Airlines
 
-Chef bought car insurance. The policy of the insurance is:
+Chef has opened a new airline. Chef has $10$ airplanes where each airplane has a capacity of $X$ passengers.
+On the first day itself, $Y$ people are willing to book a seat in  **any one**  of Chef's airplanes.
 
-- The maximum rebatable amount for any damage is Rs $X$ lakhs.
-- If the amount required for repairing the damage is $\leq X$ lakhs, that amount is rebated in full.
-
-Chef's car meets an accident and required Rs $Y$ lakhs for repairing.
-
-Determine the amount that will be rebated by the insurance company.
+Given that Chef charges $Z$ rupees for each ticket, find the  **maximum**  amount he can earn on the first day.
 
 ### Input Format
 - The first line of input will contain a single integer $T$, denoting the number of test cases.
-- The first and only line of each test case contains two space-separated integers $X$ and $Y$.
+- Each test case consists of three space-separated integers $X, Y,$ and $Z$ — the capacity of each airplane, the number of people willing to book a seat in any one of Chef's airplanes on the first day, and the cost of each seat respectively.
 ### Output Format
 
-For each test case, output the amount (in lakhs) that will be rebated by the insurance company.
+For each test case, output on a new line, the  **maximum**  amount Chef can earn on the first day.
 
 ### Constraints
 - $1 \leq T \leq 1000$
-- $1 \leq X, Y \leq 30$
+- $1 \leq X, Y, Z \leq 100$
 ### Sample 1:
 Input
 Output
 
 ```
 4
-5 3
-5 8
-4 4
-15 12
+2 15 10
+1 10 1
+5 60 100
+1 11 7
 
 ```
 
 ```
-3
-5
-4
-12
+150
+10
+5000
+70
 
 ```
 
 ### Explanation:
 
- **Test case $1$:**  The damages require only Rs $3$ lakh which is below the upper cap, so the entire Rs $3$ lakh will be rebated.
+ **Test case $1$:**  Chef has $10$ airplanes and each airplane has a capacity of $2$ passengers. Thus, there are $20$ seats available in total.
+There are $15$ people who want to book a seat. Since we have enough seats for everyone, all $15$ people can book their seats and pay $10$ rupees each. The total money Chef earns is $15\cdot 10 = 150$.
 
- **Test case $2$:**  The damages require Rs $8$ lakh which is above the upper cap, so only Rs $5$ lakh will be rebated.
+ **Test case $2$:**  Chef has $10$ airplanes and each airplane has a capacity of $1$ passenger. Thus, there are $10$ seats available in total.
+There are $10$ people who want to book a seat. Since we have enough seats for everyone, all $10$ people can book their seats and pay $1$ rupee each. The total money Chef earns is $10\cdot 1 = 10$.
 
- **Test case $3$:**  The damages require only Rs $4$ lakh which is equal to the upper cap, so the whole Rs $4$ lakh will be rebated.
+ **Test case $3$:**  Chef has $10$ airplanes and each airplane has a capacity of $5$ passengers. Thus, there are $50$ seats available in total.
+There are $60$ people who want to book a seat. Since we have only $50$ seats, only $50$ people can book their seats and pay $100$ rupees each. The total money Chef earns is $50\cdot 100 = 5000$.
 
- **Test case $4$:**  The damages require Rs $15$ lakh which is above the upper cap, so only Rs $12$ lakh will be rebated.
+ **Test case $4$:**  Chef has $10$ airplanes and each airplane has a capacity of $1$ passenger. Thus, there are $10$ seats available in total.
+There are $11$ people who want to book a seat. Since we have only $10$ seats, only $10$ people can book their seats and pay $7$ rupees each. The total money Chef earns is $10\cdot 7 = 70$.
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T13:35:54.178Z  
+**Submitted:** 2026-09-04T14:11:05.927Z  
 
 ```java
 import java.util.*;
@@ -74,11 +74,14 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
-		for(int i = 0; i < t; i++) {
-		    int x = sc.nextInt();
-		    int y =sc.nextInt();
-		    int p = Math.min(x,y);
-		    System.out.println(p);
+		for(int i = 0; i < t; i++)  {
+		    int x  = sc.nextInt();
+		    int y = sc.nextInt();
+		    int z = sc.nextInt();
+		    int a = 10 * x;
+		    int b = Math.min(y, a);
+		    int c = b * z;
+		    System.out.println(c);
 		}
 
 	}
