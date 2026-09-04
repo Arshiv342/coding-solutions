@@ -62,7 +62,7 @@ Since $251 \lt 750$, it is not possible to access CRED programs.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T10:57:35.234Z  
+**Submitted:** 2026-09-04T10:57:40.071Z  
 
 ```java
 import java.util.*;
