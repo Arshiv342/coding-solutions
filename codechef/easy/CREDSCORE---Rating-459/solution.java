@@ -8,10 +8,10 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
-		if(x<750) {
-		    System.out.println("NO");
-		} else {
+		if(x>750) {
 		    System.out.println("YES");
+		} else {
+		    System.out.println("NO");
 		}
 
 	}
