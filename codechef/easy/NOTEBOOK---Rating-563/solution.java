@@ -8,11 +8,9 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
-		for(int i = 0; i < t; i++) {
+		for(int i = 0; i < t; i++){
 		    int n = sc.nextInt();
-		    int x = 50 * n;
-		    int y = x * 30 / 100;
-		    System.out.println(y);
+		    System.out.println(n * 10);
 		}
 
 	}
