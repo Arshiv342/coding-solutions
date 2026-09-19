@@ -8,7 +8,7 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		    int t = sc.nextInt();
-		    while (t-- > 0)  {
+		    for(int i = 0; i < t; i++)  {
 		        int a = sc.nextInt();
 		        int b = sc.nextInt();
 		        int c = sc.nextInt();
