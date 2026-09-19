@@ -62,7 +62,7 @@ No
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-19T19:41:50.193Z  
+**Submitted:** 2026-09-19T19:42:34.241Z  
 
 ```java
 import java.util.*;
@@ -75,7 +75,7 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		    int t = sc.nextInt();
-		    while (t-- > 0)  {
+		    for(int i = 0; i < t; i++)  {
 		        int a = sc.nextInt();
 		        int b = sc.nextInt();
 		        int c = sc.nextInt();
