@@ -56,9 +56,9 @@ The reverse degree is `1 + 52 + 3 + 104 = 160`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-09-20T07:16:47.026Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 44 MB (beats 50.47%)  
+**Submitted:** 2026-09-20T07:16:58.241Z  
 
 ```java
 class Solution {
