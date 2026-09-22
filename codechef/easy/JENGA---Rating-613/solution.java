@@ -11,7 +11,7 @@ class Codechef
 		for(int i = 0; i < t; i++) {
 		    int n = sc.nextInt();
 		    int x = sc.nextInt();
-		    if(x >= n) {
+		    if(n <= x) {
 		        System.out.println("YES");
 		        
 		    } else {
