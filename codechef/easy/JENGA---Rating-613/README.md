@@ -60,7 +60,7 @@ YES
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-22T05:48:16.966Z  
+**Submitted:** 2026-09-22T05:48:44.416Z  
 
 ```java
 import java.util.*;
@@ -76,7 +76,7 @@ class Codechef
 		for(int i = 0; i < t; i++) {
 		    int n = sc.nextInt();
 		    int x = sc.nextInt();
-		    if(x >= n) {
+		    if(n <= x) {
 		        System.out.println("YES");
 		        
 		    } else {
