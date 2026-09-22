@@ -10,13 +10,19 @@ class Codechef
 		int t = sc.nextInt();
 		for(int i = 0; i < t; i++) {
 		    int n = sc.nextInt();
-		    int x = sc.nextInt();
-		    if(x % n == 0) {
-		        System.out.println("YES");
-		        
-		    } else {
-		        System.out.println("NO");
-		    }
+		    if (n <= 15) {
+                if (n == 11 || n == 12 ||  n == 13 || n == 14 || n == 15) {
+                    System.out.println("Lower Single");
+                } else {
+                    System.out.println("Lower Double");
+                }
+            } else { 
+              if (n == 26 || n == 27 || n == 28 || n == 29 || n == 30)  {
+                    System.out.println("Upper Single");
+                } else {
+                    System.out.println("Upper Double");
+                }
+            }
 		}
 
 	}
