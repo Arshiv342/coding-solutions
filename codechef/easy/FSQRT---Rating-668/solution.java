@@ -1,3 +1,6 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 class Codechef
 {
@@ -5,15 +8,10 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
-		for(int i = 0; i < t; i++) {
+		for(int i = 0; i < t; i++) { 
 		    int n = sc.nextInt();
-		    int m = sc.nextInt();
-		    if (n % m == 0 && (n / m) % 2 == 0){
-		        System.out.println("Yes");
-		        
-		    } else {
-		        System.out.println("No");
-		    }
+		    int m = (int) Math.sqrt(n);
+		    System.out.println(m);
 		}
-    }
+	}
 }
