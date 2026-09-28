@@ -54,7 +54,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T18:41:59.689Z  
+**Submitted:** 2026-09-28T18:42:30.506Z  
 
 ```java
 import java.util.*;
@@ -67,7 +67,7 @@ class Codechef
 	{
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
-		for(int i = 0; i < t; i++) {
+		while(t-- > 0) {
 		    int n = sc.nextInt();
 		    int k = sc.nextInt();
 		    int m = sc.nextInt();
