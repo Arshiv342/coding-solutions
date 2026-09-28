@@ -76,7 +76,7 @@ So, the total time = 60 + 8 + 60 + 8 + 20 = 156 minutes.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T05:16:42.604Z  
+**Submitted:** 2026-09-28T05:16:59.029Z  
 
 ```java
 import java.util.*;
