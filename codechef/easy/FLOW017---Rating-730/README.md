@@ -41,7 +41,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T03:35:59.846Z  
+**Submitted:** 2026-10-06T03:36:26.073Z  
 
 ```java
 import java.util.*;
@@ -56,8 +56,8 @@ class Main {
             arr[1] = sc.nextInt();
             arr[2] = sc.nextInt();
             
-            Arrays.sort(arr); // sort ascending
-            System.out.println(arr[1]); // middle element = second largest
+            Arrays.sort(arr); 
+            System.out.println(arr[1]); 
         }
     }
 }
