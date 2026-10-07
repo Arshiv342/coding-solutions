@@ -6,13 +6,18 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		Scannar sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
 		for(int i = 0; i < t; i++) {
 		    int n = sc.nextInt();
 		    int x = sc.nextInt();
 		    int p = sc.nextInt();
-		    
+		     int score = 4 * x - n;
+            if (score >= p) {
+                System.out.println("PASS");
+            } else {
+                System.out.println("FAIL");
+            }
 		}
 
 	}
