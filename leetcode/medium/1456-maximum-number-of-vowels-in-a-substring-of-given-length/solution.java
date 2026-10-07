@@ -11,7 +11,7 @@ class Solution {
         for (int i = k; i < s.length(); i++) {
             if (vowels.contains(s.charAt(i))) count++;
             if (vowels.contains(s.charAt(i - k))) count--;
-            maxCount = Math.max(maxCount, count);
+            maxCount = Math.max(maxCount, count );
         }
 
         return maxCount;
