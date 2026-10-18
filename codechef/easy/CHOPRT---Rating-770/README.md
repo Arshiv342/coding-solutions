@@ -52,7 +52,7 @@ In this example 1 as 10 is lesser than 20
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-18T07:31:46.387Z  
+**Submitted:** 2026-10-18T07:31:56.700Z  
 
 ```java
 import java.util.*;
