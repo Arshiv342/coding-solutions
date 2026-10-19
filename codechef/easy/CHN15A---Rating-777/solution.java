@@ -1,23 +1,28 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.Scanner;
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		Scanner sc = new Scanner(System.in);
+class Codechef {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         int T = sc.nextInt();
+
         while (T-- > 0) {
-            long A = sc.nextLong();
-            long B = sc.nextLong();
-            if (A < B) {
-                System.out.println("<");
-            } else if (A > B) {
-                System.out.println(">");
-            } else {
-                System.out.println("=");
+            int N = sc.nextInt();
+            int K = sc.nextInt();
+
+            int count = 0;
+
+            for (int i = 0; i < N; i++) {
+                int x = sc.nextInt();
+
+                if ((x + K) % 7 == 0) {
+                    count++;
+                }
             }
+
+            System.out.println(count);
         }
-	}
+
+        sc.close();
+    }
 }
