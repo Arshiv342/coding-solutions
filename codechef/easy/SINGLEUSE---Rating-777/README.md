@@ -65,7 +65,7 @@ This takes a total of $44 + 1 = 45$ attacks.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T17:21:53.212Z  
+**Submitted:** 2026-10-29T13:39:20.702Z  
 
 ```java
 import java.util.*;
