@@ -54,9 +54,9 @@ The sum of the squares of the distinct counts in all subarrays is equal to 12 + 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 9 ms (beats 71.51%)  
-**Memory:** 46.6 MB (beats 23.24%)  
-**Submitted:** 2026-10-31T16:24:36.540Z  
+**Runtime:** 10 ms (beats 53.32%)  
+**Memory:** 46.6 MB (beats 11.61%)  
+**Submitted:** 2026-10-31T16:25:11.758Z  
 
 ```java
 
