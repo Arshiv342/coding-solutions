@@ -63,8 +63,8 @@ Explanation: Events in chronological order go as follows:
 
 **Language:** Java  
 **Runtime:** 1 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-11-07T17:30:15.068Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-11-07T17:30:44.543Z  
 
 ```java
 
@@ -76,46 +76,46 @@ class Solution {
 
         int[] ans = new int[m];
 
-        PriorityQueue<int[]> available = new PriorityQueue<>(
-            (a, b) -> a[0] != b[0]
-                ? a[0] - b[0]
-                : a[1] - b[1]
+        PriorityQueue<int[]> free = new PriorityQueue<>(
+            (a, b) -> a[0] != b[0] ? a[0] - b[0] : a[1] - b[1]
         );
 
         PriorityQueue<long[]> busy = new PriorityQueue<>(
-            (a, b) -> a[0] != b[0]
-                ? Long.compare(a[0], b[0])
-                : a[1] != b[1]
-                    ? Long.compare(a[1], b[1])
-                    : Long.compare(a[2], b[2])
+            (a, b) -> {
+                if (a[0] != b[0])
+                    return Long.compare(a[0], b[0]);
+                if (a[1] != b[1])
+                    return Long.compare(a[1], b[1]);
+                return Long.compare(a[2], b[2]);
+            }
         );
 
         for (int i = 0; i < n; i++) {
-            available.offer(new int[]{servers[i], i});
+            free.offer(new int[]{servers[i], i});
         }
 
         for (int i = 0; i < m; i++) {
 
             while (!busy.isEmpty() && busy.peek()[0] <= i) {
                 long[] s = busy.poll();
-                available.offer(new int[]{(int)s[1], (int)s[2]});
+                free.offer(new int[]{(int)s[1], (int)s[2]});
             }
 
-            if (available.isEmpty()) {
+            if (free.isEmpty()) {
                 long time = busy.peek()[0];
 
                 while (!busy.isEmpty() && busy.peek()[0] == time) {
                     long[] s = busy.poll();
-                    available.offer(new int[]{(int)s[1], (int)s[2]});
+                    free.offer(new int[]{(int)s[1], (int)s[2]});
                 }
             }
 
-            int[] server = available.poll();
+            int[] server = free.poll();
 
             ans[i] = server[1];
 
             busy.offer(new long[]{
-                Math.max(i, busyTime(i, 0)) + tasks[i],
+                Math.max(i, busyTimePlaceholder(i)) + tasks[i],
                 server[0],
                 server[1]
             });
@@ -124,8 +124,8 @@ class Solution {
         return ans;
     }
 
-    private long busyTime(int i, int x) {
-        return x;
+    private long busyTimePlaceholder(int i) {
+        return i;
     }
 }
 
