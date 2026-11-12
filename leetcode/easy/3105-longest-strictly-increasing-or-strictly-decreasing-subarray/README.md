@@ -62,9 +62,9 @@ Hence, we return `3`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.2 MB  
-**Submitted:** 2026-11-12T03:56:28.788Z  
+**Runtime:** 1 ms (beats 98.38%)  
+**Memory:** 43.6 MB (beats 96.75%)  
+**Submitted:** 2026-11-12T03:56:36.992Z  
 
 ```java
 class Solution {
